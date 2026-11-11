@@ -32,6 +32,12 @@ const building = [
     blurb: "Exports published Framer sites to private GitHub repositories and self-hostable ZIP files",
     href: "https://www.framerextract.com/",
   },
+  {
+    name: "AutoFoundry",
+    blurb:
+      "An autonomous company factory run by agents that find demand, start companies, fund what works and kill what doesn't",
+    href: "https://foundry-p2jr2103s9ve.vercel.app/",
+  },
 ];
 
 const work = [

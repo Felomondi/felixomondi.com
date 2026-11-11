@@ -71,6 +71,17 @@ const projects: Project[] = [
     hasDetailPage: false,
   },
   {
+    title: "AutoFoundry",
+    slug: null,
+    category: "ai agents · hackathon",
+    description:
+      "An autonomous company factory run by agents. They find demand, start companies, fund what works and kill what doesn't. Built with Mateo Pedro at the Naïve hackathon.",
+    tags: ["next.js", "typescript", "postgres", "naïve sdk"],
+    githubUrl: "https://github.com/MateoPedro/autofoundry",
+    liveUrl: "https://foundry-p2jr2103s9ve.vercel.app/",
+    hasDetailPage: false,
+  },
+  {
     title: "CoTeacher AI",
     slug: "coteacher-ai",
     category: "ai · full-stack",
