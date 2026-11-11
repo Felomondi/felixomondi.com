@@ -36,27 +36,23 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="mx-auto max-w-[720px] px-6 py-20 md:py-28">
-      <h1 className="font-[family-name:var(--font-display)] text-4xl md:text-5xl tracking-tight">
-        say hello
-      </h1>
-      <p className="mt-3 text-[var(--text-secondary)] text-[15px]">
-        have a question or just want to chat? drop me a message.
-      </p>
+    <div className="col page" data-enter style={{ "--i": 1 } as React.CSSProperties}>
+      <h1 className="page-title">Say hello</h1>
+      <p className="lede">Have a question or just want to chat? Drop me a message.</p>
 
       <div className="mt-14 max-w-md">
         <form onSubmit={handleSubmit} className="space-y-5">
           <div>
-            <label htmlFor="name" className="block text-sm text-[var(--text)] mb-1.5">name</label>
-            <Input id="name" name="name" type="text" required value={formData.name} onChange={handleChange} placeholder="your name" autoComplete="name" />
+            <label htmlFor="name" className="block text-sm text-[var(--text)] mb-1.5">Name</label>
+            <Input id="name" name="name" type="text" required value={formData.name} onChange={handleChange} placeholder="Your name" autoComplete="name" />
           </div>
           <div>
-            <label htmlFor="email" className="block text-sm text-[var(--text)] mb-1.5">email</label>
+            <label htmlFor="email" className="block text-sm text-[var(--text)] mb-1.5">Email</label>
             <Input id="email" name="email" type="email" required value={formData.email} onChange={handleChange} placeholder="you@example.com" autoComplete="email" />
           </div>
           <div>
-            <label htmlFor="message" className="block text-sm text-[var(--text)] mb-1.5">message</label>
-            <Textarea id="message" name="message" required value={formData.message} onChange={handleChange} placeholder="what's on your mind?" rows={5} />
+            <label htmlFor="message" className="block text-sm text-[var(--text)] mb-1.5">Message</label>
+            <Textarea id="message" name="message" required value={formData.message} onChange={handleChange} placeholder="What's on your mind?" rows={5} />
           </div>
 
           <button
@@ -64,28 +60,28 @@ export default function ContactPage() {
             disabled={status === "loading"}
             className="text-sm font-medium text-[var(--text)] underline underline-offset-3 decoration-[var(--border)] hover:decoration-[var(--text)] transition-all disabled:opacity-50"
           >
-            {status === "loading" ? "sending..." : status === "success" ? "sent!" : status === "error" ? "try again" : "send message →"}
+            {status === "loading" ? "Sending..." : status === "success" ? "Sent!" : status === "error" ? "Try again" : "Send message →"}
           </button>
 
           {status === "success" && (
             <p className="text-sm text-[var(--text-secondary)]">
-              thanks! i&apos;ll get back to you soon.
+              Thanks! I&apos;ll get back to you soon.
             </p>
           )}
           {status === "error" && (
             <p className="text-sm text-red-600">
-              something went wrong. try again or reach out on{" "}
-              <a href="https://www.linkedin.com/in/felomondi/" target="_blank" rel="noopener noreferrer" className="inline-link">linkedin</a>.
+              Something went wrong. Try again or reach out on{" "}
+              <a href="https://www.linkedin.com/in/felomondi/" target="_blank" rel="noopener noreferrer" className="inline-link">LinkedIn</a>.
             </p>
           )}
         </form>
       </div>
 
-      <div className="mt-16 text-[15px] text-[var(--text-secondary)]">
+      <div className="mt-16 text-sm text-[var(--text-secondary)]">
         <p>
-          or find me on{" "}
-          <a href="https://github.com/Felomondi" target="_blank" rel="noopener noreferrer" className="inline-link">github</a>,{" "}
-          <a href="https://www.linkedin.com/in/felomondi/" target="_blank" rel="noopener noreferrer" className="inline-link">linkedin</a>.{" "}
+          Or find me on{" "}
+          <a href="https://github.com/Felomondi" target="_blank" rel="noopener noreferrer" className="inline-link">GitHub</a>,{" "}
+          <a href="https://www.linkedin.com/in/felomondi/" target="_blank" rel="noopener noreferrer" className="inline-link">LinkedIn</a>.
         </p>
       </div>
     </div>
