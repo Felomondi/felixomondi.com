@@ -1,18 +1,17 @@
 import type { Metadata } from "next";
-import { Inter, Instrument_Serif } from "next/font/google";
+import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Nav from "@/components/Nav";
+import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
-const inter = Inter({
+const geist = Geist({
   subsets: ["latin"],
-  variable: "--font-body",
+  variable: "--font-geist",
 });
 
-const instrumentSerif = Instrument_Serif({
-  weight: "400",
+const geistMono = Geist_Mono({
   subsets: ["latin"],
-  variable: "--font-display",
+  variable: "--font-geist-mono",
 });
 
 export const metadata: Metadata = {
@@ -26,12 +25,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${instrumentSerif.variable}`}>
-      <body className="font-[family-name:var(--font-body)]">
-        <Nav />
-        <main className="pt-16">
-          {children}
-        </main>
+    <html lang="en" className={`${geist.variable} ${geistMono.variable}`}>
+      <body>
+        <Header />
+        <main className="min-h-screen">{children}</main>
         <Footer />
       </body>
     </html>
